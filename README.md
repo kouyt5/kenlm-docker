@@ -4,7 +4,7 @@ kenlm的docker封装
 ## 使用方法
 在当前目录下存放文本文件，对于中文来说，需要将每个文本用空格隔开。然后输入如下命令，生成语言模型文件。
 ```shell
-docker run -it --rm -v ${PWD}:/workspace kenlm -o 3 --text /workspace/gen.txt --arpa /workspace/temp.arpa
+docker run -it --rm -v ${PWD}:/workspace 511023/kenlm:latest -o 3 --text /workspace/<text-name>.txt --arpa /workspace/<arpa-name>.arpa
 ```
 其中：
 + `-v` 表示把当前目录挂载到容器中的workspace下
